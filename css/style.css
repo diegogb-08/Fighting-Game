@@ -1,0 +1,32 @@
+.container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.audio {
+    width: 2.5em;
+    height: 2.5em;
+    position: absolute;
+    right: 1em;
+    bottom: 0.5em;
+}
+
+#mute {
+    width: 100%;
+    cursor: pointer;
+}
+
+#mute:active {
+    width: 2em;
+    height: 2em;
+}
+
+#title {
+    width: 80%;
+    height: 80%;
+}
