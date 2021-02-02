@@ -12,6 +12,7 @@
 </head>
 <body>
     
+    <audio src="audio/music_background.mp3" autoplay loop></audio>
     <div class='light x1'></div>
     <div class='light x2'></div>
     <div class='light x3'></div>
@@ -48,19 +49,42 @@
             <img class="fighter" id="Android18" onclick="selectCharacter('Android18')" src="img/figthers/android18.png" alt="">
             <img class="fighter" id="Buu" onclick="selectCharacter('Buu')" src="img/figthers/Buu.png" alt="">
             <img class="fighter" id="Cell" onclick="selectCharacter('Cell')" src="img/figthers/Cell.png" alt="">
-            <img class="fighter" id="Freeza" onclick="selectCharacter('Freeza')" src="img/figthers/freezer2.png" alt="">
+            <img class="fighter" id="Freeza" onclick="selectCharacter('Freeza')" src="img/figthers/freezer.png" alt="">
             <img class="fighter" id="Burter" onclick="selectCharacter('Burter')" src="img/figthers/Burter.png" alt="">
             <img class="fighter" id="Krillin" onclick="selectCharacter('Krillin')" src="img/figthers/Krillin.png" alt="">
             <img class="fighter" id="Goku" onclick="selectCharacter('Goku')" src="img/figthers/goku.png" alt="">
             <img class="fighter" id="Picolo" onclick="selectCharacter('Picolo')" src="img/figthers/picolo.png" alt="">
-            <img class="fighter" id="Trunks" onclick="selectCharacter('Trunks')" src="img/figthers/trunks2.png" alt="">
-            <img class="fighter" id="Vegeta" onclick="selectCharacter('Vegeta')" src="img/figthers/vegeta_normal.png" alt="">
+            <img class="fighter" id="Trunks" onclick="selectCharacter('Trunks')" src="img/figthers/trunks.png" alt="">
+            <img class="fighter" id="Vegeta" onclick="selectCharacter('Vegeta')" src="img/figthers/vegeta.png" alt="">
         </div>
         
     </div>
 
-    <div class="container" id="fase3">
-
+    <div class="container" id="fase3" style="display: none">
+            
+            <div class="opponent" >
+                <div class="life"></div>
+                <div class="contrincante" id="opponent1"></div>
+            </div>
+            <div class="vsOpponent">
+                <div class="centerOpponentTop">
+                    <img id="vs" src="img/vs.png" alt="vs">
+                </div>
+                <div class="centerOpponentMiddle">
+                    <img src="img/arena.jpg" id="backgroundArena" alt="">
+                </div>
+                <div class="centerOpponentBottom">
+                    <div class="counterLife"></div>
+                    <div class="buttonFight">
+                        <img id="button" src="img/button.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="opponent" >
+                <div class="life"></div>
+                <div class="contrincante" id="opponent2"></div>
+            </div>
+        
     </div>
     <div class="container" id="fase4">
 

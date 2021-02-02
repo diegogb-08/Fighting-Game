@@ -150,3 +150,116 @@
     font-size: 2rem;
     text-align: center;
 }
+
+#fase3 {
+    /* background-image: url("img/arena.jpg"); */
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;    
+}
+
+.opponent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px red solid;
+    width: 28rem;
+    height: 28rem;
+}
+
+.vsOpponent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px red solid;
+    width: 20rem;
+    height: 33rem;
+}
+
+.life {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px red solid;
+    background-color: green;
+    width: 28rem;
+    height: 2rem;
+    overflow: visible;
+}
+
+.contrincante {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px red solid;
+    width: 28rem;
+    height: 26rem;
+}
+
+
+.centerOpponentTop {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px red solid;
+    width: 20rem;
+    height: 7rem;
+}
+
+.centerOpponentMiddle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px red solid;
+    width: 20rem;
+    height: 11rem;
+}
+
+.centerOpponentBottom {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px red solid;
+    width: 20rem;
+    height: 15rem;
+}
+
+#vs {
+    height: 80%;
+}
+
+#backgroundArena {
+    width: 100%;
+    overflow: hidden;
+}
+
+
+
+#opponentStyle {
+    width: 28rem;
+    height: 26rem;
+}
+
+.buttonFight {
+    height: 9rem;
+    width: 9rem;
+    margin: 1rem;
+}
+
+#button {
+    width: 100%;
+}
+
+.counterLife {
+    border: 1px solid blue;
+    height: 4rem;
+    width: 7rem;
+}
