@@ -65,27 +65,24 @@
 
 
 #fase1 {
-    display: ;
+    display: none;
 }
 
 #fase2 {
     
 }
 
+.selectPlayer h1 {
+    color: white;
+    margin: 0.5rem;
+}
+
 .grid {
-    width: 60rem;
+    width: 50rem;
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: repeat(2, 1fr);
     grid-gap: 1em;
-}
-
-.infoPlayer{
-    width: 40rem;
-    height: 8rem;
-    margin-top: 1rem;
-    background-color: goldenrod;
-    border-radius: 0.5rem;
 }
 
 .fighter {
@@ -98,4 +95,29 @@
 .fighter:hover {
     filter: contrast(200%) brightness(150%);
     border: 4px solid red;
+}
+
+.infoFase2{
+    width: 70rem;
+    height: 12rem;
+    margin-top: 1rem;
+    background-color: goldenrod;
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: row;
+}
+
+.infoPlayers {
+    width: 100%;
+    margin: 0.5rem;
+    border: 1px solid red;
+    font-family: 'Play', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+#infoFighters {
+    flex-direction: column;
 }
