@@ -22,12 +22,12 @@
     <div class='light x8'></div>
     <div class='light x9'></div>
 
-    <div class="audio">
-        <img id="mute" src="img/audio.png" alt="audio" onclick="playPause()">
-            <audio id="audio" type="audio/mpeg" autoplay="autoplay" loop="true">
-                <source src="audio/music_background.mp3">
-            </audio>
-    </div>
+    <!--<div class="audio">
+        <img id="mute" src="img/audio.png" alt="audio" onclick="playPause()"> 
+        <audio id="audio" type="audio/mpeg" autoplay loop>
+            <source src="audio/music_background.mp3">
+        </audio>
+    </div>-->
 
     <div class="container" id="fase1">
         <div class="centralContainer">
@@ -37,7 +37,7 @@
     </div>
     <div class="container" id="fase2">
         <div class="selectPlayer">
-            <h1>SELECT 3 FIGHTERS</h1>
+            <h1>SELECT YOUR FIGHTER</h1>
         </div>
         <div class="grid">
             <img class="fighter" src="img/figthers/android18.png" alt="">
@@ -53,11 +53,13 @@
         </div>
         <div class="infoFase2">
             <div class="infoPlayers">
-                <h1>PLAYER 1</h1>
+                <h1>TEAM 1</h1>
+                <div class="totalTeam"></div>
             </div>
             <div class="infoPlayers" id="infoFighters"></div>
             <div class="infoPlayers">
-                <h1>PLAYER 2</h1>
+                <h1>TEAM 2</h1>
+                <div class="totalTeam"></div>
             </div>
         </div>
     </div>

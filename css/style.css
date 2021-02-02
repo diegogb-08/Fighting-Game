@@ -8,7 +8,7 @@
     font-family: 'Play', sans-serif;
 }
 
-
+/*
 .audio {
     width: 2.5em;
     height: 2.5em;
@@ -26,6 +26,8 @@
     width: 2em;
     height: 2em;
 }
+
+*/
 
 .centralContainer {
     width: 80%;
@@ -111,6 +113,7 @@
     margin: 0.5rem;
     font-family: 'Play', sans-serif;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     color: white;
@@ -120,4 +123,12 @@
     flex-direction: column;
     background-color: goldenrod;
     border-radius: 0.5rem;
+}
+
+.totalTeam {
+    height: 80%;
+    width: 100%;
+    margin: 1rem;
+    display: flex;
+    align-items: center;
 }
