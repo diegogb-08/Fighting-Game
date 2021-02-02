@@ -165,7 +165,6 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border: 1px red solid;
     width: 28rem;
     height: 28rem;
 }
@@ -175,9 +174,9 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border: 1px red solid;
     width: 20rem;
     height: 33rem;
+    margin: 0.5rem;
 }
 
 .life {
@@ -185,8 +184,9 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border: 1px red solid;
     background-color: green;
+    margin-bottom: 0.5rem;
+    border-radius: 0.5rem;
     width: 28rem;
     height: 2rem;
     overflow: visible;
@@ -196,7 +196,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 1px red solid;
     width: 28rem;
     height: 26rem;
 }
@@ -207,7 +206,6 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border: 1px red solid;
     width: 20rem;
     height: 7rem;
 }
@@ -217,7 +215,6 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border: 1px red solid;
     width: 20rem;
     height: 11rem;
 }
@@ -227,9 +224,9 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border: 1px red solid;
     width: 20rem;
     height: 15rem;
+    margin-top: 0.5rem;
 }
 
 #vs {
@@ -259,7 +256,17 @@
 }
 
 .counterLife {
-    border: 1px solid blue;
     height: 4rem;
-    width: 7rem;
+    width: 18rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.liveFighter {
+    height: 4rem;
+    width: 8rem;
+    background-color: gray;
+    border-radius: 1rem;
 }
