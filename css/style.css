@@ -203,11 +203,31 @@
 
 .centerOpponentTop {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
     width: 20rem;
     height: 7rem;
+}
+
+#fighterName1 {
+    width: 7rem;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 2rem;
+}
+
+#fighterName2 {
+    width: 7rem;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 2rem;
 }
 
 .centerOpponentMiddle {
@@ -253,6 +273,28 @@
 
 #button {
     width: 100%;
+}
+
+#button:active {
+    width: 99%;
+    filter: invert(100%);
+
+}
+
+.players {
+    height: 4rem;
+    width: 18rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    margin-top: 1rem;
+}
+
+.playerNumber {
+    text-align: center;
+    font-size: 1.5rem;
 }
 
 .counterLife {
