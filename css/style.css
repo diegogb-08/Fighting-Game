@@ -101,7 +101,6 @@
     width: 70rem;
     height: 12rem;
     margin-top: 1rem;
-    background-color: goldenrod;
     border-radius: 0.5rem;
     display: flex;
     flex-direction: row;
@@ -110,7 +109,6 @@
 .infoPlayers {
     width: 100%;
     margin: 0.5rem;
-    border: 1px solid red;
     font-family: 'Play', sans-serif;
     display: flex;
     justify-content: center;
@@ -120,4 +118,6 @@
 
 #infoFighters {
     flex-direction: column;
+    background-color: goldenrod;
+    border-radius: 0.5rem;
 }
