@@ -22,47 +22,43 @@
     <div class='light x8'></div>
     <div class='light x9'></div>
 
-    <!--<div class="audio">
-        <img id="mute" src="img/audio.png" alt="audio" onclick="playPause()"> 
-        <audio id="audio" type="audio/mpeg" autoplay loop>
-            <source src="audio/music_background.mp3">
-        </audio>
-    </div>-->
-
-    <div class="container" id="fase1">
+    <div class="container" id="fase1" style="display: flex">
         <div class="centralContainer">
             <img id="title" src="img/Title.png" alt="title">
-            <a href="#fase2"><button id="start">START GAME</button></a>
+            <button id="start" onclick="changeScreen('fase1','fase2')">START GAME</button>
         </div>    
     </div>
-    <div class="container" id="fase2">
-        <div class="selectPlayer">
-            <h1>SELECT YOUR FIGHTER</h1>
-        </div>
-        <div class="grid">
-            <img class="fighter" src="img/figthers/android18.png" alt="">
-            <img class="fighter" src="img/figthers/Buu.png" alt="">
-            <img class="fighter" src="img/figthers/Cell.png" alt="">
-            <img class="fighter" src="img/figthers/freezer2.png" alt="">
-            <img class="fighter" src="img/figthers/Burter.png" alt="">
-            <img class="fighter" src="img/figthers/Krillin.png" alt="">
-            <img class="fighter" src="img/figthers/goku.png" alt="">
-            <img class="fighter" src="img/figthers/picolo.png" alt="">
-            <img class="fighter" src="img/figthers/trunks2.png" alt="">
-            <img class="fighter" src="img/figthers/vegeta_normal.png" alt="">
-        </div>
+    <div class="container" id="fase2" style="display: none">
+
         <div class="infoFase2">
             <div class="infoPlayers">
-                <h1>TEAM 1</h1>
-                <div class="totalTeam"></div>
+                <h1>PLAYER 1</h1>
+                <div class="totalTeam" id="infoPlayer1"></div>
             </div>
             <div class="infoPlayers" id="infoFighters"></div>
             <div class="infoPlayers">
-                <h1>TEAM 2</h1>
-                <div class="totalTeam"></div>
+                <h1>PLAYER 2</h1>
+                <div class="totalTeam" id="infoPlayer2"></div>
             </div>
         </div>
+       <div class="selectPlayer">
+            <h2>SELECT YOUR FIGHTER</h2>
+        </div>
+        <div class="grid">
+            <img class="fighter" id="Android18" onclick="selectCharacter('Android18')" src="img/figthers/android18.png" alt="">
+            <img class="fighter" id="Buu" onclick="selectCharacter('Buu')" src="img/figthers/Buu.png" alt="">
+            <img class="fighter" id="Cell" onclick="selectCharacter('Cell')" src="img/figthers/Cell.png" alt="">
+            <img class="fighter" id="Freeza" onclick="selectCharacter('Freeza')" src="img/figthers/freezer2.png" alt="">
+            <img class="fighter" id="Burter" onclick="selectCharacter('Burter')" src="img/figthers/Burter.png" alt="">
+            <img class="fighter" id="Krillin" onclick="selectCharacter('Krillin')" src="img/figthers/Krillin.png" alt="">
+            <img class="fighter" id="Goku" onclick="selectCharacter('Goku')" src="img/figthers/goku.png" alt="">
+            <img class="fighter" id="Picolo" onclick="selectCharacter('Picolo')" src="img/figthers/picolo.png" alt="">
+            <img class="fighter" id="Trunks" onclick="selectCharacter('Trunks')" src="img/figthers/trunks2.png" alt="">
+            <img class="fighter" id="Vegeta" onclick="selectCharacter('Vegeta')" src="img/figthers/vegeta_normal.png" alt="">
+        </div>
+        
     </div>
+
     <div class="container" id="fase3">
 
     </div>
