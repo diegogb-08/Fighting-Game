@@ -149,9 +149,8 @@ const hit = () => {
     if(turn == 0) {
         if(specialAttack > 3 && specialAttack < 7) {
             if(specialAttack == 5 || specialAttack == player2.luck){
-                console.log("STRIKEBACK PLAYER 2")
                 player2.strikeBack(player1);
-                infoPowerAttack.innerHTML = `${player1.name} SUPER attacks but ${player2.name} StrikeBack`;
+                infoPowerAttack.innerHTML = `${player1.name} SUPER attacks but ${player2.name} Strikes Back`;
             }else{
                 infoPowerAttack.innerHTML = `${player1.name} SUPER attack`;
                 player1.powerAttack(player2);
@@ -163,9 +162,8 @@ const hit = () => {
     }else{
         if(specialAttack > 3 && specialAttack < 7) {
             if(specialAttack == 5 || specialAttack == player1.luck) {
-                console.log("STRIKEBACK PLAYER 1")
                 player1.strikeBack(player2);
-                infoPowerAttack.innerHTML = `${player2.name} SUPER attack but ${player1.name} StrikeBack`;
+                infoPowerAttack.innerHTML = `${player2.name} SUPER attack but ${player1.name} Strikes Back`;
             }else{
                 infoPowerAttack.innerHTML = `${player2.name} SUPER attack`;
                 player2.powerAttack(player1);
@@ -187,23 +185,39 @@ const hit = () => {
     if(player1.life <= 0){
         console.log("PLAYER 2 WINS");
         showWinner.innerHTML = `<img id="winnertStyle" src="img/figthers/${player2.name}.png">`;
-        showWinnerName.innerHTML = `${player2.name}`;
+        showWinnerName.innerHTML = `${player2.name} wins!`;
 
         resolveIn(1000).then(delay => {
 
             changeScreen("fase3","fase4");
             
         });
+
+
+        resolveIn(5000).then(delay => {
+
+            changeScreen("fase4","fase1");
+            
+        });
+
     }else if(player2.life <= 0){
         console.log("PLAYER 1 WINS");
-        showWinner.innerHTML = `<img id="winnertStyle" src="img/figthers/${player2.name}.png">`;
-        showWinnerName.innerHTML = `${player1.name}`;
+        showWinner.innerHTML = `<img id="winnertStyle" src="img/figthers/${player1.name}.png">`;
+        showWinnerName.innerHTML = `${player1.name} wins!`;
 
         resolveIn(1000).then(delay => {
 
             changeScreen("fase3","fase4");
             
         });
+
+        resolveIn(5000).then(delay => {
+
+            changeScreen("fase4","fase1");
+            
+        });
+
+
     }else{
         life1.innerHTML = Math.floor(`${player1.life}`);
         life2.innerHTML = Math.floor(`${player2.life}`);
