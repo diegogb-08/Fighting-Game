@@ -356,16 +356,15 @@ SELECT PLAYER */
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 28rem;
-    height: 28rem;
+    width: auto;
+    height: 100%;
     font-size: 4rem;
     color: white;
     text-shadow: 3px 3px #030303;
 }
 
 #winnertStyle {
-    width: 28rem;
-    height: 28rem;
+    height: 100%;
 }
 
 #fase4 {
