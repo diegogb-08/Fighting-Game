@@ -12,6 +12,8 @@
 </head>
 <body>
     
+    <!-- This is the background of the Game-->
+
     <audio id="audio" src="audio/music_background.mp3" ></audio>
     <div class='light x1'></div>
     <div class='light x2'></div>
@@ -23,14 +25,20 @@
     <div class='light x8'></div>
     <div class='light x9'></div>
 
+
+    <!-- First Screen with logo and Start Button -->
+
     <div class="container" id="fase1" style="display: flex">
         <div class="centralContainer">
             <img id="title" src="img/Title.png" alt="title">
             <button id="start" onclick="resolveIn(1500).then(delay => {changeScreen('fase1','fase2')});">START GAME</button>
         </div>    
     </div>
-    <div class="container" id="fase2" style="display: none">
 
+    <!-- Second Screen with select character -->
+
+
+    <div class="container" id="fase2" style="display: none">
         <div class="infoFase2">
             <div class="infoPlayers">
                 <h1>PLAYER 1</h1>
@@ -57,11 +65,11 @@
             <img class="fighter" id="Trunks" onclick="selectCharacter('Trunks')" src="img/figthers/trunks.png" alt="">
             <img class="fighter" id="Vegeta" onclick="selectCharacter('Vegeta')" src="img/figthers/vegeta.png" alt="">
         </div>
-        
     </div>
 
+    <!-- Third Screen with Arena & Fight -->
+
     <div class="container" id="fase3" style="display: none">
-            
             <div class="opponent" >
                 <div class="life"></div>
                 <div class="contrincante" id="opponent1"></div>
@@ -93,7 +101,6 @@
                 <div class="life"></div>
                 <div class="contrincante" id="opponent2"></div>
             </div>
-        
     </div>
     
 

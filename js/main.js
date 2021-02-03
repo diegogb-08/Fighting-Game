@@ -36,7 +36,7 @@ let fighter4 = new Fighter("Freeza",300,50,40,5,50);
 let fighter5 = new Fighter("Burter",300,30,30,2,35);
 let fighter6 = new Fighter("Krillin",300,35,45,2,20);
 let fighter7 = new Fighter("Goku",300,55,45,6,60);
-let fighter8 = new Fighter("Picolo",300,42,32,7,30);
+let fighter8 = new Fighter("Picolo",350,42,32,7,30);
 let fighter9 = new Fighter("Trunks",300,45,50,8,35);
 let fighter10 = new Fighter("Vegeta",300,54,44,8,50);
 
@@ -164,10 +164,10 @@ const hit = () => {
             //     console.log("StrikeBack player2");
             // };
             player1.powerAttack(player2);
-            console.log("ATAQUE ESPECIAL player 1 " + player1.life);
+            console.log("ATAQUE ESPECIAL player 1 " + parseInt(player2.life));
         };
         player1.attack(player2);
-        console.log("Attack player 1 " + player1.life);
+        console.log("Attack player 1 " + parseInt(player2.life));
     }else{
         if(specialAttack > 3 && specialAttack < 7) {
             // if(specialAttack == 5) {
@@ -175,10 +175,10 @@ const hit = () => {
             //     console.log("StrikeBack player1");
             // };
             player2.powerAttack(player1);
-            console.log("ATAQUE ESPECIAL player 2 " + player2.life);
+            console.log("ATAQUE ESPECIAL player 2 " + parseInt(player1.life));
         };
         player2.attack(player1);
-        console.log("Attack player 2 " + player2.life);
+        console.log("Attack player 2 " + parseInt(player1.life));
     };
 
     // console.log(player1.name + " " + player1.life);
