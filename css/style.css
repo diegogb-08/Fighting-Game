@@ -48,7 +48,6 @@
 
 
 /* SECOND SCREEN - 
-
 SELECT PLAYER */
 
 .selectPlayer h2 {
@@ -331,4 +330,31 @@ SELECT PLAYER */
     justify-content: center;
     align-items: center;
     font-size: 3rem
+}
+
+/* WINNER SCREEN */
+
+.containerWinner {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.winner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 28rem;
+    height: 28rem;
+    border: 1px solid red;
+    font-size: 4rem;
+    color: white;
+}
+
+#winnertStyle {
+    width: 28rem;
+    height: 28rem;
 }

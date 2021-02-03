@@ -179,11 +179,40 @@ const hit = () => {
 
     // FIGHTERS LIFE COUNTING
 
-        let life1 = document.getElementById("liveP1")
-        let life2 = document.getElementById("liveP2")
+    let life1 = document.getElementById("liveP1");
+    let life2 = document.getElementById("liveP2");
+    let showWinner = document.getElementById("winner");
+    let showWinnerName = document.getElementById("winnerName");
 
+    if(player1.life <= 0){
+        console.log("PLAYER 2 WINS");
+        showWinner.innerHTML = `<img id="winnertStyle" src="img/figthers/${player2.name}.png">`;
+        showWinnerName.innerHTML = `${player2.name}`;
+
+        resolveIn(1000).then(delay => {
+
+            changeScreen("fase3","fase4");
+            
+        });
+    }else if(player2.life <= 0){
+        console.log("PLAYER 1 WINS");
+        showWinner.innerHTML = `<img id="winnertStyle" src="img/figthers/${player2.name}.png">`;
+        showWinnerName.innerHTML = `${player1.name}`;
+
+        resolveIn(1000).then(delay => {
+
+            changeScreen("fase3","fase4");
+            
+        });
+    }else{
         life1.innerHTML = Math.floor(`${player1.life}`);
         life2.innerHTML = Math.floor(`${player2.life}`);
+    };
+
+
+    // CHANGE SCREEN TO WINNER
+
+    
 
 };
 
@@ -194,8 +223,4 @@ const hit = () => {
 
 const resolveIn = delay =>
 new Promise(res => setTimeout(() => res(delay), delay));
-
-
-
-
 
