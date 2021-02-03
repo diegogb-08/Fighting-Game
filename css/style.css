@@ -8,27 +8,6 @@
     font-family: 'Play', sans-serif;
 }
 
-/*
-.audio {
-    width: 2.5em;
-    height: 2.5em;
-    position: absolute;
-    right: 1em;
-    bottom: 0.5em;
-}
-
-#mute {
-    width: 100%;
-    cursor: pointer;
-}
-
-#mute:active {
-    width: 2em;
-    height: 2em;
-}
-
-*/
-
 .centralContainer {
     width: 80%;
     height: 80%;
@@ -39,6 +18,7 @@
     border-radius: 2rem;
 }
 
+/* FIRST SCREEN */
 
 #title {
     width: 100%;
@@ -66,6 +46,11 @@
 }
 
 
+
+/* SECOND SCREEN - 
+
+SELECT PLAYER */
+
 .selectPlayer h2 {
     color: white;
     margin: 0.5rem;
@@ -78,6 +63,7 @@
     height: 100;
     border: 4px solid goldenrod;
     border-radius: 0.5rem;
+    cursor: grab;
 }
 
 .fighter:hover {
@@ -137,7 +123,21 @@
     flex-direction: column;
     background-color: goldenrod;
     border-radius: 0.5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    font-size: 1.5rem;
+}
 
+#infoFighter1 {
+    margin: 0.5rem;
+}
+
+#infoFighter2 {
+    margin: 0.5rem;
+    text-align: right;
 }
 
 .totalTeam {
@@ -150,6 +150,10 @@
     font-size: 2rem;
     text-align: center;
 }
+
+
+
+/* THIRD SCREEN - ARENA & FIGHT */
 
 #fase3 {
     /* background-image: url("img/arena.jpg"); */
@@ -244,7 +248,7 @@
     justify-content: center;
     align-items: center;
     width: 20rem;
-    height: 15rem;
+    height: 18rem;
     margin-top: 0.5rem;
 }
 
@@ -254,10 +258,8 @@
 
 #backgroundArena {
     width: 100%;
-    overflow: hidden;
+    height: 100%;
 }
-
-
 
 #opponentStyle {
     width: 28rem;
@@ -265,9 +267,22 @@
 }
 
 .buttonFight {
-    height: 9rem;
-    width: 9rem;
+    height: 7rem;
+    width: 7rem;
     margin: 1rem;
+    cursor: pointer;
+}
+
+#infoBattle {
+    width: 20rem;
+    height: 4rem;
+    color: white;
+    background-color: red;
+    margin-top: 0.5rem;
+    border-radius: 1rem;
+    text-align: center;
+    align-items: center;
+    font-size: 1.5rem;
 }
 
 #button {
