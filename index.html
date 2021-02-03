@@ -12,7 +12,7 @@
 </head>
 <body>
     
-    <audio id="audio" src="audio/music_background.mp3"></audio>
+    <audio id="audio" src="audio/music_background.mp3" ></audio>
     <div class='light x1'></div>
     <div class='light x2'></div>
     <div class='light x3'></div>
@@ -26,7 +26,7 @@
     <div class="container" id="fase1" style="display: flex">
         <div class="centralContainer">
             <img id="title" src="img/Title.png" alt="title">
-            <button id="start" onclick="changeScreen('fase1','fase2')">START GAME</button>
+            <button id="start" onclick="resolveIn(1500).then(delay => {changeScreen('fase1','fase2')});">START GAME</button>
         </div>    
     </div>
     <div class="container" id="fase2" style="display: none">
@@ -49,7 +49,7 @@
             <img class="fighter" id="C-18" onclick="selectCharacter('C-18')" src="img/figthers/c-18.png" alt="">
             <img class="fighter" id="Buu" onclick="selectCharacter('Buu')" src="img/figthers/Buu.png" alt="">
             <img class="fighter" id="Cell" onclick="selectCharacter('Cell')" src="img/figthers/Cell.png" alt="">
-            <img class="fighter" id="Freeza" onclick="selectCharacter('Freeza')" src="img/figthers/freezer.png" alt="">
+            <img class="fighter" id="Freeza" onclick="selectCharacter('Freeza')" src="img/figthers/freeza.png" alt="">
             <img class="fighter" id="Burter" onclick="selectCharacter('Burter')" src="img/figthers/Burter.png" alt="">
             <img class="fighter" id="Krillin" onclick="selectCharacter('Krillin')" src="img/figthers/Krillin.png" alt="">
             <img class="fighter" id="Goku" onclick="selectCharacter('Goku')" src="img/figthers/goku.png" alt="">
@@ -95,20 +95,7 @@
             </div>
         
     </div>
-    <div class="container" id="fase4">
-
-    </div>
-    <div class="container" id="fase5">
-
-    </div>
-    <div class="container" id="fase6">
-
-    </div>
-
     
-
-
-
 
 <script src="js/main.js"></script>
 </body>
