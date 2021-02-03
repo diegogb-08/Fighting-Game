@@ -90,7 +90,6 @@ SELECT PLAYER */
 .infoFase2{
     width: 70rem;
     height: 12rem;
-    border: 1px solid red;
     border-radius: 0.5rem;
     display: flex;
     flex-direction: row;
@@ -359,7 +358,6 @@ SELECT PLAYER */
     align-items: center;
     width: 28rem;
     height: 28rem;
-    border: 1px solid red;
     font-size: 4rem;
     color: white;
     text-shadow: 3px 3px #030303;
