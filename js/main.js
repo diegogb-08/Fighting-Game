@@ -59,6 +59,7 @@ let allplayers = {
 };
 
 
+
 // Change first screen 
 
 let changeScreen = (pastPhase,newPhase) => {
@@ -74,9 +75,40 @@ let changeScreen = (pastPhase,newPhase) => {
     
 };
 
+
+// HOVER CHARACTER
+
+let hoverCharacter = (character) => {
+    let fighter = allplayers[character];
+    let showStats1 = document.getElementById("infoFighter1");
+    let showStats2 = document.getElementById("infoFighter2");
+    let showName1 = document.getElementById("infoPlayer1");
+    let showName2 = document.getElementById("infoPlayer2");
+
+    if(player1 == "") {
+        // SHOW STATS PLAYER 1
+        showName1.innerHTML = `${fighter.name}`
+        showStats1.innerHTML = `Strenght:  ${fighter.strenght} <br>
+                                Defense:  ${fighter.defense} <br> 
+                                Luck:  ${fighter.luck} <br>
+                                Power:  ${fighter.power}`;
+    }else {
+        // SHOW STATS PLAYER 2
+        showName2.innerHTML = `${fighter.name}`
+        showStats2.innerHTML = `${fighter.strenght}  :Strenght<br>
+                                ${fighter.defense}  :Defense<br> 
+                                ${fighter.luck}  :Luck<br>
+                                ${fighter.power}  :Power`;
+    };
+
+};
+
+
+
 // SELECT CHARACTER
 
 let selectCharacter = (character) => {
+
     if(player1 == "") {
         player1 = allplayers[character];
         
@@ -183,7 +215,6 @@ const hit = () => {
     let showWinnerName = document.getElementById("winnerName");
 
     if(player1.life <= 0){
-        console.log("PLAYER 2 WINS");
         showWinner.innerHTML = `<img id="winnertStyle" src="img/figthers/${player2.name}.png">`;
         showWinnerName.innerHTML = `${player2.name} wins!`;
 
@@ -201,7 +232,6 @@ const hit = () => {
         });
 
     }else if(player2.life <= 0){
-        console.log("PLAYER 1 WINS");
         showWinner.innerHTML = `<img id="winnertStyle" src="img/figthers/${player1.name}.png">`;
         showWinnerName.innerHTML = `${player1.name} wins!`;
 
@@ -237,4 +267,7 @@ const hit = () => {
 
 const resolveIn = delay =>
 new Promise(res => setTimeout(() => res(delay), delay));
+
+
+// Function Hover fighter
 

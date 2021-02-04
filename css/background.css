@@ -2,12 +2,12 @@
     margin: 0;
     padding: 0;
 }
-
+/*a27d39*/
 body {
     margin: 0;
     height: 100vh;
     font-weight: 100;
-    background: radial-gradient(#a27d39,#1f1013);
+    background: radial-gradient(rgb(204, 173, 0),#1f1013);
     -webkit-overflow-Y: hidden;
     -moz-overflow-Y: hidden;
     -o-overflow-Y: hidden;
