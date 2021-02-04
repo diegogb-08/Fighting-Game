@@ -269,5 +269,18 @@ const resolveIn = delay =>
 new Promise(res => setTimeout(() => res(delay), delay));
 
 
-// Function Hover fighter
 
+//Funciones 
+
+let resetGame = () => {
+
+    let initialLife = ;
+    
+    player1.life = initialLife;
+    player2.life = initialLife;
+
+    player1 = "";
+    player2 = "";
+
+
+};
