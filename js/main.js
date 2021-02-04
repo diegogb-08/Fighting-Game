@@ -64,8 +64,8 @@ let allplayers = {
 
 let changeScreen = (pastPhase,newPhase) => {
     
-    let currentScreen = document.getElementById(pastPhase);
-    let futureScreen = document.getElementById(newPhase);
+    currentScreen = document.getElementById(pastPhase);
+    futureScreen = document.getElementById(newPhase);
 
     
     
@@ -76,14 +76,15 @@ let changeScreen = (pastPhase,newPhase) => {
 };
 
 
+
 // HOVER CHARACTER
 
 let hoverCharacter = (character) => {
     let fighter = allplayers[character];
-    let showStats1 = document.getElementById("infoFighter1");
-    let showStats2 = document.getElementById("infoFighter2");
-    let showName1 = document.getElementById("infoPlayer1");
-    let showName2 = document.getElementById("infoPlayer2");
+    showStats1 = document.getElementById("infoFighter1");
+    showStats2 = document.getElementById("infoFighter2");
+    showName1 = document.getElementById("picPlayer1");
+    showName2 = document.getElementById("picPlayer2");
 
     if(player1 == "") {
         // SHOW STATS PLAYER 1
@@ -115,25 +116,27 @@ let selectCharacter = (character) => {
         document.getElementById(character).className = "fighterSelected1";
         document.getElementById(character).onclick = "";
 
-        let mensaje1 = document.getElementById("infoPlayer1");
-        let infoFighter1 = document.getElementById("infoFighter1");
-
-        mensaje1.innerHTML = `You have chosen <br> ${player1.name}`;
+        mensaje1 = document.getElementById("picPlayer1");
+        infoFighter1 = document.getElementById("infoFighter1");
+        
+        //`You have chosen <br> ${player1.name}`;
+        mensaje1.innerHTML = `<img class="imgSelected" id="red" src="img/figthers/${player1.name}.png">`; 
         infoFighter1.innerHTML = `Strenght:  ${player1.strenght} <br>
                                 Defense:  ${player1.defense} <br> 
                                 Luck:  ${player1.luck} <br>
                                 Power:  ${player1.power}`;
-
+        
     }else{
         player2 = allplayers[character];
 
         document.getElementById(character).className = "fighterSelected2";
         document.getElementById(character).onclick = "";
 
-        let mensaje2 = document.getElementById("infoPlayer2");
-        let infoFighter2 = document.getElementById("infoFighter2");
+        mensaje2 = document.getElementById("picPlayer2");
+        infoFighter2 = document.getElementById("infoFighter2");
 
-        mensaje2.innerHTML = `You have chosen <br> ${player2.name}`;
+        //`You have chosen <br> ${player2.name}`;
+        mensaje2.innerHTML = `<img class="imgSelected" id="blue" src="img/figthers/${player2.name}.png">`; 
         infoFighter2.innerHTML = `${player1.strenght}  :Strenght<br>
                                    ${player2.defense}  :Defense<br> 
                                     ${player2.luck}  :Luck<br>
@@ -141,12 +144,12 @@ let selectCharacter = (character) => {
 
         // LOAD CHARACTERS INTO THE ARENA
 
-        let showPlayer1 = document.getElementById("opponent1");
-        let showPlayer2 = document.getElementById("opponent2");
-        let showNameP1 = document.getElementById("fighterName1")
-        let showNameP2 = document.getElementById("fighterName2")
-        let showLife1 = document.getElementById("liveP1")
-        let showLife2 = document.getElementById("liveP2")
+        showPlayer1 = document.getElementById("opponent1");
+        showPlayer2 = document.getElementById("opponent2");
+        showNameP1 = document.getElementById("fighterName1")
+        showNameP2 = document.getElementById("fighterName2")
+        showLife1 = document.getElementById("liveP1")
+        showLife2 = document.getElementById("liveP2")
 
         showPlayer1.innerHTML = `<img id="opponentStyle" src="img/figthers/${player1.name}.png">`;
         showPlayer2.innerHTML = `<img id="opponentStyle" src="img/figthers/${player2.name}.png">`;
@@ -157,14 +160,16 @@ let selectCharacter = (character) => {
 
         // CHANGE SCREEN TO ARENA
 
-        resolveIn(4000).then(delay => {
+        resolveIn(1500).then(delay => {
 
             changeScreen("fase2","fase3");
             
         });
+
+    
     };
     
-    
+
 };
 
 
@@ -173,9 +178,9 @@ let selectCharacter = (character) => {
 
 const hit = () => {
 
-    let turn = Math.floor(Math.random() * 2);
-    let specialAttack = Math.floor(Math.random() * 10);
-    let infoPowerAttack = document.getElementById("infoBattle");
+    turn = Math.floor(Math.random() * 2);
+    specialAttack = Math.floor(Math.random() * 10);
+    infoPowerAttack = document.getElementById("infoBattle");
 
 
     if(turn == 0) {
@@ -209,12 +214,12 @@ const hit = () => {
 
     // FIGHTERS LIFE COUNTING
 
-    let life1 = document.getElementById("liveP1");
-    let life2 = document.getElementById("liveP2");
-    let showWinner = document.getElementById("winner");
-    let showWinnerName = document.getElementById("winnerName");
+    life1 = document.getElementById("liveP1");
+    life2 = document.getElementById("liveP2");
+    showWinner = document.getElementById("winner");
+    showWinnerName = document.getElementById("winnerName");
 
-    if(player1.life <= 0){
+    if(player1.life < 1){
         showWinner.innerHTML = `<img id="winnertStyle" src="img/figthers/${player2.name}.png">`;
         showWinnerName.innerHTML = `${player2.name} wins!`;
 
@@ -225,13 +230,13 @@ const hit = () => {
         });
 
 
-        resolveIn(5000).then(delay => {
+        // resolveIn(5000).then(delay => {
 
-            changeScreen("fase4","fase1");
-            
-        });
-
-    }else if(player2.life <= 0){
+        //     changeScreen("fase4","fase1");
+        // });
+        
+       // resetGame(player1,player2);
+    }else if(player2.life < 1){
         showWinner.innerHTML = `<img id="winnertStyle" src="img/figthers/${player1.name}.png">`;
         showWinnerName.innerHTML = `${player1.name} wins!`;
 
@@ -241,13 +246,13 @@ const hit = () => {
             
         });
 
-        resolveIn(5000).then(delay => {
+        // resolveIn(5000).then(delay => {
 
-            changeScreen("fase4","fase1");
+        //     changeScreen("fase4","fase1");
             
-        });
+        // });
 
-
+        //resetGame(player1,player2);
     }else{
         life1.innerHTML = Math.floor(`${player1.life}`);
         life2.innerHTML = Math.floor(`${player2.life}`);
@@ -272,15 +277,20 @@ new Promise(res => setTimeout(() => res(delay), delay));
 
 //Funciones 
 
-let resetGame = () => {
+// let resetGame = (player1,player2) => {
 
-    let initialLife = ;
+//     // initialLife1 = character1;
+//     // initialLife2 = character2;
     
-    player1.life = initialLife;
-    player2.life = initialLife;
+//     // player1.life = initialLife1;
+//     // player2.life = initialLife2;
 
-    player1 = "";
-    player2 = "";
+//     player1 = "";
+//     player2 = "";
 
-
-};
+//     console.log(player1,player2);
+//     document.getElementById(player1).className = "fighter";
+//     document.getElementById(player2).className = "fighter";
+    
+    
+// };
