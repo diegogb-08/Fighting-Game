@@ -92,7 +92,7 @@ let hoverCharacter = (character) => {
                                 Defense:  ${fighter.defense} <br> 
                                 Luck:  ${fighter.luck} <br>
                                 Power:  ${fighter.power}`;
-    }else {
+    }else if(player2 == "") {
         // SHOW STATS PLAYER 2
         showName2.innerHTML = `${fighter.name}`
         showStats2.innerHTML = `${fighter.strenght}  :Strenght<br>
@@ -125,7 +125,7 @@ let selectCharacter = (character) => {
                                 Luck:  ${player1.luck} <br>
                                 Power:  ${player1.power}`;
         
-    }else{
+    }else if(player2 == "") {
         player2 = allplayers[character];
 
         document.getElementById(character).className = "fighterSelected2";
