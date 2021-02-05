@@ -24,7 +24,7 @@
     width: 100%;
 }
 
-#start {
+.start {
     background-color: rgba(255, 255, 255, 0.267);
     border-radius: 1rem;
     width: 250px;
@@ -41,7 +41,7 @@
     text-decoration: none;
 }
 
-#start:hover {
+.start:hover {
     background-color: rgba(255, 255, 255, 0.692);
 }
 
@@ -370,11 +370,29 @@ SELECT PLAYER */
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     width: auto;
     height: 100%;
+}
+
+.winnerContainer {
     font-size: 4rem;
     color: white;
     text-shadow: 3px 3px #030303;
+    height: 55%;
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.buttonsPlayAgain {
+    height: 15%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #winnertStyle {

@@ -33,7 +33,7 @@
     <div class="container" id="fase1" style="display: flex">
         <div class="centralContainer">
             <img id="title" src="img/Title.png" alt="title">
-            <button id="start" onclick="resolveIn(1500).then(delay => {changeScreen('fase1','fase2')});">START GAME</button>
+            <button id="start" class="start" onclick="resolveIn(1500).then(delay => {changeScreen('fase1','fase2')});">START GAME</button>
         </div>    
     </div>
 
@@ -115,11 +115,20 @@
 
    <div class="container" id="fase4" style="display: none">
         <div class="containerWinner">
-            <div class="winner" id="winnerName"></div>
+            <div class="winner">
+                <div class="winnerContainer" id="winnerName"></div>
+                <div class="buttonsPlayAgain">
+                    <button class="start">Reset Game</button>
+                </div>
+                <div class="buttonsPlayAgain">
+                    <button class="start">Play Again</button>
+                </div>
+            </div>
             <div class="winner" id="winner"></div>
         </div>
     </div>
 
+<script src="js/keyboard.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>
