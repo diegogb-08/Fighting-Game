@@ -2,10 +2,6 @@
 
 class Fighter {
 
-    _initialState = this.life;
-
-    _state = null;
-
     constructor(name,life,strenght,defense,luck,power){
         this.name = name;
         this.life = life;
@@ -41,7 +37,7 @@ let fighter4 = new Fighter("Freeza",300,51,38,7,44);
 let fighter5 = new Fighter("Burter",300,30,30,5,15);
 let fighter6 = new Fighter("Krillin",300,36,45,6,23);
 let fighter7 = new Fighter("Goku",300,55,45,6,58);
-let fighter8 = new Fighter("Picolo",350,42,32,5,31);
+let fighter8 = new Fighter("Picolo",300,32,62,5,21);
 let fighter9 = new Fighter("Trunks",300,45,50,8,35);
 let fighter10 = new Fighter("Vegeta",300,54,44,8,50);
 
@@ -49,7 +45,7 @@ let player1 = "";
 
 let player2 = "";
 
-let resetBtn;
+
 
 //traductor
 let allplayers = {
@@ -73,15 +69,11 @@ let changeScreen = (pastPhase,newPhase) => {
     
     currentScreen = document.getElementById(pastPhase);
     futureScreen = document.getElementById(newPhase);
-
-    
     
     currentScreen.style.display = "none";
     futureScreen.style.display = "flex";
 
-    
 };
-
 
 
 // HOVER CHARACTER
@@ -111,44 +103,6 @@ let hoverCharacter = (character) => {
 
 };
 
-// // RESTART GAME
-
-// const playAgain = () => {
-    
-//     initialLife = 300;
-    
-//     player1.life = initialLife;
-//     player2.life = initialLife;
-    
-//     player1 = "";
-//     player2 = "";
-
-//     resolveIn(1000).then(delay => {
-
-//             changeScreen("fase4","fase3");
-            
-//     });
-// };
-
-
-
-// let gameRestart = () => {
-
-//     resetBtn = document.getElementById("resetBtn")
-//     resetBtn.addEventListener('click', gameRestart);
-
-//     Fighter(_state = _initialState);
-
-
-//     player1 = "";
-//     player2 = "";
-
-//     resolveIn(1000).then(delay => {
-
-//         changeScreen('fase4','fase2');
-        
-//     });
-// };
 
 
 // SELECT CHARACTER
@@ -182,7 +136,7 @@ let selectCharacter = (character) => {
 
         //`You have chosen <br> ${player2.name}`;
         mensaje2.innerHTML = `<img class="imgSelected" id="blue" src="img/figthers/${player2.name}.png">`; 
-        infoFighter2.innerHTML = `${player1.strenght}  :Strenght<br>
+        infoFighter2.innerHTML = `${player2.strenght}  :Strenght<br>
                                    ${player2.defense}  :Defense<br> 
                                     ${player2.luck}  :Luck<br>
                                     ${player2.power}  :Power`;
@@ -193,15 +147,10 @@ let selectCharacter = (character) => {
         showPlayer2 = document.getElementById("opponent2");
         showNameP1 = document.getElementById("fighterName1")
         showNameP2 = document.getElementById("fighterName2")
-        showLife1 = document.getElementById("liveP1")
-        showLife2 = document.getElementById("liveP2")
-
         showPlayer1.innerHTML = `<img id="opponentStyle" src="img/figthers/${player1.name}.png">`;
         showPlayer2.innerHTML = `<img id="opponentStyle" src="img/figthers/${player2.name}.png">`;
         showNameP1.innerHTML = `${player1.name}`;
         showNameP2.innerHTML = `${player2.name}`;
-        showLife1.innerHTML = `${player1.life}`;
-        showLife2.innerHTML = `${player2.life}`;
 
         // CHANGE SCREEN TO ARENA
 
@@ -227,6 +176,8 @@ const hit = () => {
     turn = Math.floor(Math.random() * 2);
     specialAttack = Math.floor(Math.random() * 10);
     infoPowerAttack = document.getElementById("infoBattle");
+    healthP1 = document.getElementById("healthP1");
+    healthP2 = document.getElementById("healthP2");
 
     if(turn == 0) {
         if(specialAttack > 3 && specialAttack < 7) {
@@ -259,8 +210,8 @@ const hit = () => {
 
     // FIGHTERS LIFE COUNTING
 
-    life1 = document.getElementById("liveP1");
-    life2 = document.getElementById("liveP2");
+    // life1 = document.getElementById("liveP1");
+    // life2 = document.getElementById("liveP2");
     showWinner = document.getElementById("winner");
     showWinnerName = document.getElementById("winnerName");
 
@@ -287,9 +238,8 @@ const hit = () => {
 
         
     }else{
-        life1.innerHTML = Math.floor(`${player1.life}`);
-        life2.innerHTML = Math.floor(`${player2.life}`);
-
+        healthP1.value = `${player1.life}`;
+        healthP2.value = `${player2.life}`;
     };
 
 };
@@ -303,4 +253,11 @@ const resolveIn = delay =>
 new Promise(res => setTimeout(() => res(delay), delay));
 
 
+// RESET GAME
 
+
+const reset = document.getElementById('resetBtn');
+
+reset.addEventListener('click', () => {
+    window.location.reload();
+})

@@ -80,7 +80,8 @@
 
     <div class="container" id="fase3" style="display: none">
             <div class="opponent" >
-                <div class="life"></div>
+                <div class="players">PLAYER 1</div>
+                <div class="life"><progress id="healthP1" value="300" min="0" max="300"></progress></div>
                 <div class="contrincante" id="opponent1"></div>
             </div>
             <div class="vsOpponent">
@@ -91,22 +92,17 @@
                 </div>
                 <div class="centerOpponentMiddle" id="infoBattle" ></div>
                 <div class="centerOpponentBottom">
-                    <div class="players">
-                        <div class="playerNumber">PLAYER 1</div>
-                        <div class="playerNumber">PLAYER 2</div>
-                    </div>
-                    <div class="counterLife">
-                        <div class="liveFighter" id="liveP1"></div>
-                        <div class="liveFighter" id="liveP2"></div>
-                    </div>
-                    <!--<div id="infoBattle"></div>-->
+                    <!-- <div class="players">
+                    </div>-->
+                    <div id="infoBattle"></div>
                     <div class="buttonFight">
                         <img id="button" src="img/button2.png" onclick="hit()">
                     </div>
                 </div>
             </div>
             <div class="opponent" >
-                <div class="life"></div>
+                <div class="players">PLAYER 2</div>
+                <div class="life"><progress id="healthP2" value="300" min="0" max="300"></progress></canvas></div>
                 <div class="contrincante" id="opponent2"></div>
             </div>
     </div>
@@ -118,10 +114,7 @@
             <div class="winner">
                 <div class="winnerContainer" id="winnerName"></div>
                 <div class="buttonsPlayAgain">
-                    <button class="start" id="resetBtn" onclick="">Reset Game</button>
-                </div>
-                <div class="buttonsPlayAgain">
-                    <button class="start" id="playBtn" onclick="playAgain()">Play Again</button>
+                    <button class="start" id="resetBtn">Reset Game</button>
                 </div>
             </div>
             <div class="winner" id="winner"></div>
