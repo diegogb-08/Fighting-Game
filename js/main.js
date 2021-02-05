@@ -261,3 +261,9 @@ const reset = document.getElementById('resetBtn');
 reset.addEventListener('click', () => {
     window.location.reload();
 })
+
+const music = document.getElementById('audioBtn');
+
+music.addEventListener('click', () => {
+    window.location.reload();
+})
