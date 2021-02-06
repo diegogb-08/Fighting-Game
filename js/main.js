@@ -118,7 +118,6 @@ let selectCharacter = (character) => {
         mensaje1 = document.getElementById("picPlayer1");
         infoFighter1 = document.getElementById("infoFighter1");
         
-        //`You have chosen <br> ${player1.name}`;
         mensaje1.innerHTML = `<img class="imgSelected" id="red" src="img/figthers/${player1.name}.png">`; 
         infoFighter1.innerHTML = `Strenght:  ${player1.strenght} <br>
                                 Defense:  ${player1.defense} <br> 
@@ -178,12 +177,34 @@ const hit = () => {
     infoPowerAttack = document.getElementById("infoBattle");
     healthP1 = document.getElementById("healthP1");
     healthP2 = document.getElementById("healthP2");
+    
 
     if(turn == 0) {
         if(specialAttack > 3 && specialAttack < 7) {
             if(specialAttack == 5 || specialAttack == player2.luck){
-                player2.strikeBack(player1);
-                infoPowerAttack.innerHTML = `${player1.name} SUPER attacks but ${player2.name} Strikes Back`;
+
+                //GIF GOKU
+                
+                if(player2.name == fighter7.name) {
+                    player2.strikeBack(player1);
+                    infoPowerAttack.innerHTML = `${player1.name} SUPER attacks but ${player2.name} Strikes Back`;
+                    
+                    resolveIn(500).then(delay => {
+
+                        changeScreen("fase3","gifGoku");
+                        
+                    });
+
+                    resolveIn(4100).then(delay => {
+
+                        changeScreen("gifGoku","fase3");
+                        
+                    });
+
+                }else {
+                    player2.strikeBack(player1);
+                    infoPowerAttack.innerHTML = `${player1.name} SUPER attacks but ${player2.name} Strikes Back`;
+                };
             }else{
                 infoPowerAttack.innerHTML = `${player1.name} SUPER attack`;
                 player1.powerAttack(player2);
@@ -195,8 +216,29 @@ const hit = () => {
     }else{
         if(specialAttack > 3 && specialAttack < 7) {
             if(specialAttack == 5 || specialAttack == player1.luck) {
+
+                //GIF GOKU
+
+                if(player1.name == fighter7.name) {
+                    player1.strikeBack(player2);
+                    infoPowerAttack.innerHTML = `${player2.name} SUPER attack but ${player1.name} Strikes Back`;
+                    
+                    resolveIn(500).then(delay => {
+
+                        changeScreen("fase3","gifGoku");
+                        
+                    });
+
+                    resolveIn(4100).then(delay => {
+
+                        changeScreen("gifGoku","fase3");
+                        
+                    });
+
+                }else {
                 player1.strikeBack(player2);
                 infoPowerAttack.innerHTML = `${player2.name} SUPER attack but ${player1.name} Strikes Back`;
+                }
             }else{
                 infoPowerAttack.innerHTML = `${player2.name} SUPER attack`;
                 player2.powerAttack(player1);
@@ -210,8 +252,6 @@ const hit = () => {
 
     // FIGHTERS LIFE COUNTING
 
-    // life1 = document.getElementById("liveP1");
-    // life2 = document.getElementById("liveP2");
     showWinner = document.getElementById("winner");
     showWinnerName = document.getElementById("winnerName");
 
@@ -245,7 +285,12 @@ const hit = () => {
 };
 
 
+const showGifAttack = () => {
 
+
+
+
+}
 
 //funcion de delay...
 

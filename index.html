@@ -27,7 +27,7 @@
 
     
     
-    <iframe src="audio/music_background.mp3" type="audio/mp3" allow="autoplay" loop="true" id="iframeAudio" style="display:none"></iframe>
+    <!-- <iframe src="audio/music_background.mp3" type="audio/mp3" allow="autoplay" loop="true" id="iframeAudio" style="display:none"></iframe> -->
     <!-- First Screen with logo and Start Button -->
 
     <div class="container" id="fase1" style="display: flex">
@@ -91,7 +91,9 @@
                     <img id="vs" src="img/vs.png" alt="vs">
                     <div id="fighterName2"></div>
                 </div>
-                <div class="centerOpponentMiddle" id="infoBattle" ></div>
+                <div class="centerOpponentMiddle" id="infoBattle" >
+                    
+                </div>
                 <div class="centerOpponentBottom">
                     <div class="buttonFight">
                         <img id="button" src="img/button2.png" onclick="hit()">
@@ -119,7 +121,12 @@
         </div>
     </div>
 
-<script src="js/keyboard.js"></script>
+
+
+    <div id="gifGoku" style="display: none">
+        <img src="img/gif/goku.gif">
+    </div>
+
 <script src="js/main.js"></script>
 </body>
 </html>

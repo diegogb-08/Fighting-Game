@@ -410,3 +410,14 @@ progress {
     background-image: url("/img/confeti.gif");
 }
 
+#gifGoku {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+#gifGoku img {
+    height: 100%;
+}
