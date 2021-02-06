@@ -40,7 +40,7 @@ const showGifBurter = () => {
         
     });
 
-    resolveIn(5100).then(delay => {
+    resolveIn(5200).then(delay => {
 
         changeScreen("gifBurter","fase3");
         
@@ -105,6 +105,51 @@ const showGifFreeza = () => {
     resolveIn(6000).then(delay => {
 
         changeScreen("gifFreeza","fase3");
+        
+    });
+};
+
+const showGifCell = () => {
+
+    resolveIn(500).then(delay => {
+
+        changeScreen("fase3","gifCell");
+        
+    });
+
+    resolveIn(3000).then(delay => {
+
+        changeScreen("gifCell","fase3");
+        
+    });
+};
+
+const showGifKrillin = () => {
+
+    resolveIn(500).then(delay => {
+
+        changeScreen("fase3","gifKrillin");
+        
+    });
+
+    resolveIn(3200).then(delay => {
+
+        changeScreen("gifKrillin","fase3");
+        
+    });
+};
+
+const showGifC18 = () => {
+
+    resolveIn(500).then(delay => {
+
+        changeScreen("fase3","gifC18");
+        
+    });
+
+    resolveIn(2900).then(delay => {
+
+        changeScreen("gifC18","fase3");
         
     });
 };

@@ -36,10 +36,10 @@ let fighter3 = new Fighter("Cell",300,40,25,6,38);
 let fighter4 = new Fighter("Freeza",300,51,38,7,44);
 let fighter5 = new Fighter("Burter",300,35,30,5,25);
 let fighter6 = new Fighter("Krillin",300,36,45,6,23);
-let fighter7 = new Fighter("Goku",300,55,45,6,58);
+let fighter7 = new Fighter("Goku",300,55,45,6,48);
 let fighter8 = new Fighter("Picolo",300,32,62,5,29);
 let fighter9 = new Fighter("Trunks",300,45,50,8,35);
-let fighter10 = new Fighter("Vegeta",300,54,44,8,50);
+let fighter10 = new Fighter("Vegeta",300,54,44,8,46);
 
 let player1 = "";
 
@@ -161,153 +161,7 @@ let selectCharacter = (character) => {
 
     
     };
-    
-
-    
-
-};
-
-
-// Funcion Arena Game
-
-const hit = () => {
-
-    turn = Math.floor(Math.random() * 2);
-    specialAttack = Math.floor(Math.random() * 10);
-    infoPowerAttack = document.getElementById("infoBattle");
-    healthP1 = document.getElementById("healthP1");
-    healthP2 = document.getElementById("healthP2");
-    
-
-    if(turn == 0) {
-        if(specialAttack > 3 && specialAttack < 7) {
-            if(specialAttack == 5 || specialAttack == player2.luck){
-
-                //GIF ATTACKS
-
-                if(player2.name == fighter7.name && player1.life > 99) {
-                    player2.strikeBack(player1);
-                    infoPowerAttack.innerHTML = `${player1.name} SUPER attacks but ${player2.name} Strikes Back`;
-                    
-                    showGifGoku();
-
-                }else if(player2.name == fighter8.name && player1.life > 99){
-                    player2.strikeBack(player1);
-                    infoPowerAttack.innerHTML = `${player1.name} SUPER attacks but ${player2.name} Strikes Back`;
-                    
-                    showGifPicolo();
-                }else if(player2.name == fighter5.name && player1.life > 99) {
-                    player2.strikeBack(player1);
-                    infoPowerAttack.innerHTML = `${player1.name} SUPER attacks but ${player2.name} Strikes Back`;
-                    
-                    showGifBurter();
-
-                }else if(player2.name == fighter2.name && player1.life > 99){
-                    player2.strikeBack(player1);
-                    infoPowerAttack.innerHTML = `${player1.name} SUPER attacks but ${player2.name} Strikes Back`;
-                    
-                    showGifBuu();
-
-                }else if(player2.name == fighter9.name && player1.life > 99) {
-                    player2.strikeBack(player1);
-                    infoPowerAttack.innerHTML = `${player1.name} SUPER attacks but ${player2.name} Strikes Back`;
-                    
-                    showGifTrunks();
-
-                }else if(player2.name == fighter10.name && player1.life > 99){
-                    player2.strikeBack(player1);
-                    infoPowerAttack.innerHTML = `${player1.name} SUPER attacks but ${player2.name} Strikes Back`;
-                    
-                    showGifVegeta();
-
-                }else if(player2.name == fighter4.name && player1.life > 99){
-                    player2.strikeBack(player1);
-                    infoPowerAttack.innerHTML = `${player1.name} SUPER attacks but ${player2.name} Strikes Back`;
-                    
-                    showGifFreeza();
-
-                }else{
-                    player2.strikeBack(player1);
-                    infoPowerAttack.innerHTML = `${player1.name} SUPER attacks but ${player2.name} Strikes Back`;
-                };
-            }else{
-                infoPowerAttack.innerHTML = `${player1.name} SUPER attack`;
-                player1.powerAttack(player2);
-            };
-        }else {
-            player1.attack(player2);
-            infoPowerAttack.innerHTML = `${player1.name} attacks`;
-        };  
-    }else{
-        if(specialAttack > 3 && specialAttack < 7) {
-            if(specialAttack == 5 || specialAttack == player1.luck) {
-
-                //GIF ATTACKS
-
-                if(player1.name == fighter7.name && player2.life > 99) {
-                    player1.strikeBack(player2);
-                    infoPowerAttack.innerHTML = `${player2.name} SUPER attack but ${player1.name} Strikes Back`;
-                    
-                    showGifGoku();
-
-                }else if(player1.name == fighter8.name && player2.life > 99) {
-                    player1.strikeBack(player2);
-                    infoPowerAttack.innerHTML = `${player2.name} SUPER attack but ${player1.name} Strikes Back`;
-                    
-                    showGifPicolo();
-                    
-                }else if(player1.name == fighter5.name && player2.life > 99) {
-                    player1.strikeBack(player2);
-                    infoPowerAttack.innerHTML = `${player2.name} SUPER attack but ${player1.name} Strikes Back`;
-                    
-                    showGifBurter();
-
-                }else if(player1.name == fighter2.name && player2.life > 99) {
-                    player1.strikeBack(player2);
-                    infoPowerAttack.innerHTML = `${player2.name} SUPER attack but ${player1.name} Strikes Back`;
-                    
-                    showGifBuu();
-
-                }else if(player1.name == fighter9.name && player2.life > 99) {
-                    player1.strikeBack(player2);
-                    infoPowerAttack.innerHTML = `${player2.name} SUPER attack but ${player1.name} Strikes Back`;
-                    
-                    showGifTrunks();
-
-                }else if(player1.name == fighter10.name && player2.life > 99) {
-                    player1.strikeBack(player2);
-                    infoPowerAttack.innerHTML = `${player2.name} SUPER attack but ${player1.name} Strikes Back`;
-                    
-                    showGifVegeta();
-
-                }else if(player1.name == fighter4.name && player2.life > 99) {
-                    player1.strikeBack(player2);
-                    infoPowerAttack.innerHTML = `${player2.name} SUPER attack but ${player1.name} Strikes Back`;
-                    
-                    showGifFreeza();
-
-                }else {
-                player1.strikeBack(player2);
-                infoPowerAttack.innerHTML = `${player2.name} SUPER attack but ${player1.name} Strikes Back`;
-                }
-            }else{
-                infoPowerAttack.innerHTML = `${player2.name} SUPER attack`;
-                player2.powerAttack(player1);
-            };
-        }else{
-            player2.attack(player1);
-            infoPowerAttack.innerHTML = `${player2.name} attacks`;
-        }
-    };
-
-
-    // FIGHTERS LIFE COUNTING
-    console.log("PLAYER 1    " + player1.life);
-    console.log("PLAYER 2    " + player2.life);
-    healthP1.value = `${player1.life}`;
-    healthP2.value = `${player2.life}`;
-    showWinnerGame();
-
+  
 };
 
 
