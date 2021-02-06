@@ -147,7 +147,7 @@ const showGifC18 = () => {
         
     });
 
-    resolveIn(2900).then(delay => {
+    resolveIn(2800).then(delay => {
 
         changeScreen("gifC18","fase3");
         
