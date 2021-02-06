@@ -117,7 +117,7 @@ const showGifCell = () => {
         
     });
 
-    resolveIn(3000).then(delay => {
+    resolveIn(5500).then(delay => {
 
         changeScreen("gifCell","fase3");
         
