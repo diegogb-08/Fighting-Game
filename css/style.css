@@ -315,8 +315,11 @@ SELECT PLAYER */
 .buttonFight {
     height: 7rem;
     width: 7rem;
-    margin: 1rem;
     cursor: pointer;
+    text-align: center;
+    color: white;
+    text-shadow: 3px 3px #030303;
+    font-size: 1.5rem;
 }
 
 #button {
