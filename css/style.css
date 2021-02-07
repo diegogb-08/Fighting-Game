@@ -320,6 +320,10 @@ SELECT PLAYER */
     color: white;
     text-shadow: 3px 3px #030303;
     font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 .buttonHit {
