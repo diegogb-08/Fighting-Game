@@ -30,16 +30,16 @@ class Fighter {
 //Instancias y variables globales
 // name,  life,   strenght,   defense,  luck,  power
 
-let fighter1 = new Fighter("C-18",300,39,48,7,32);
-let fighter2 = new Fighter("Buu",300,34,50,6,35);
-let fighter3 = new Fighter("Cell",300,40,25,6,38);
-let fighter4 = new Fighter("Freeza",300,51,38,7,44);
-let fighter5 = new Fighter("Burter",300,35,30,5,25);
-let fighter6 = new Fighter("Krillin",300,36,45,6,23);
-let fighter7 = new Fighter("Goku",300,55,45,6,48);
-let fighter8 = new Fighter("Picolo",300,32,62,5,29);
-let fighter9 = new Fighter("Trunks",300,45,50,8,35);
-let fighter10 = new Fighter("Vegeta",300,54,44,8,46);
+let fighter1 = new Fighter("C-18",400,39,48,7,32);
+let fighter2 = new Fighter("Buu",400,34,50,6,35);
+let fighter3 = new Fighter("Cell",400,40,25,6,38);
+let fighter4 = new Fighter("Freeza",400,51,38,7,44);
+let fighter5 = new Fighter("Burter",400,35,30,5,25);
+let fighter6 = new Fighter("Krillin",400,36,45,6,23);
+let fighter7 = new Fighter("Goku",400,55,45,6,48);
+let fighter8 = new Fighter("Picolo",400,32,62,5,29);
+let fighter9 = new Fighter("Trunks",400,45,50,8,35);
+let fighter10 = new Fighter("Vegeta",400,54,44,8,46);
 
 let player1 = "";
 

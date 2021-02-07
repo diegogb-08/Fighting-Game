@@ -33,5 +33,5 @@ In order to play you will need to click on the following link ([Fighting-Game](h
 ![StartGame](/img/Winner.jpg)
 
 
-# ENJOY THE BATTLE!
+# ENJOY THE BATTLE! :muscle:
 
