@@ -135,9 +135,6 @@ const showWinnerGame = () => {
 
 
 
-// LOCAL STORAGE
-
-
 
 
 //funcion de delay...
