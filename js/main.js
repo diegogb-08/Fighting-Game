@@ -113,26 +113,39 @@ const showWinnerGame = () => {
     if(player1.life < 1){
         showWinner.innerHTML = `<img id="winnertStyle" src="img/figthers/${player2.name}.png">`;
         showWinnerName.innerHTML = `${player2.name} wins!`;
-
+        
         resolveIn(1000).then(delay => {
-
+            
             changeScreen("fase3","fase4");
         });
+        winner(player2.name)
 
     }else if(player2.life < 1){
         showWinner.innerHTML = `<img id="winnertStyle" src="img/figthers/${player1.name}.png">`;
         showWinnerName.innerHTML = `${player1.name} wins!`;
-
+        
         resolveIn(1000).then(delay => {
-
+            
             changeScreen("fase3","fase4");
             
         });  
+        winner(player1.name)
     };
 
     
 };
 
+// LOCAL STORAGE
+
+const winner = (player) => {
+
+    let winner_serialized = JSON.stringify(player);
+    console.log(winner_serialized);
+    
+    localStorage.setItem("Winner", winner_serialized);
+    console.log(localStorage);
+
+}
 
 
 

@@ -177,10 +177,3 @@ const hit = () => {
 };
 
 
-// LOCAL STORAGE
-
-let hit_serialized = JSON.stringify(hit);
-console.log(hit_serialized);
-
-localStorage.setItem("HIT", hit_serialized);
-console.log(localStorage);
